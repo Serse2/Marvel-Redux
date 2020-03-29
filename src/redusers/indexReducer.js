@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import film from './film';
+import filmReducer from './film';
 import personaggi from './personaggi';
 
 const rootReducer = combineReducers({
-    film: film,
+    film: filmReducer,
     personaggi: personaggi
 })
 
