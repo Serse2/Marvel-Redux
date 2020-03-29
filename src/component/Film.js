@@ -26,16 +26,16 @@ export default class Film extends Component {
     render() {
 
         const { error, films, loading } = this.props.film
-        // if (error) {
-        //     return(
-        //         <div>{error}</div>
-        //     )
-        // }
-        // if(loading){
-        //     return (
-        //         <div>Loading....</div>
-        //     )
-        // }
+        if (error) {
+            return(
+                <div>{error}</div>
+            )
+        }
+        if(loading){
+            return (
+                <div>Loading....</div>
+            )
+        }
 
         return (
             <div>
