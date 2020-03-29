@@ -4,7 +4,11 @@ import thunk from 'redux-thunk'
 import rootReduser from './redusers/indexReducer';
 
 const initialStore = {
-    films: {},
+    films: {
+        loading: false,
+        error: null,
+        films: [],
+    },
     personaggi: ['pecora','pecora1','pecora2']
 }
 const store = createStore(rootReduser, initialStore, applyMiddleware(thunk))
