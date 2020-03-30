@@ -8,7 +8,7 @@ export default class Film extends Component {
     }
 
     componentDidMount = () =>{
-        this.props.fetchFilms()
+        this.props.fetchMarvel('series')
     }
 
     handleFilm = (e) =>{
@@ -28,7 +28,7 @@ export default class Film extends Component {
         const { error, films, loading } = this.props.film
         if (error) {
             return(
-                <div>{error}</div>
+                <div>si è verificato un errore, prego verificare la console{console.log(error)}</div>
             )
         }
         if(loading){
@@ -36,7 +36,6 @@ export default class Film extends Component {
                 <div>Loading....</div>
             )
         }
-
         return (
             <div>
                 <form onSubmit={this.handleFilm} hidden>

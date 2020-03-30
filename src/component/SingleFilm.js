@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import filmReducer from '../redusers/film'
+import React, { Component } from 'react';
 
 export default class SingleFilm extends Component {
     render() {
