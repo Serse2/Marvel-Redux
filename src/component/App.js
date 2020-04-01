@@ -1,11 +1,11 @@
 import { bindActionCreators } from 'redux';
 
-import * as actionsCreators  from '../actions/actionsCreators'
+import * as actionsCreators  from '../actions/actionsCreators';
 
 //importo la funzione connect, questa funzione permette la connessione tra un componente React e il Redux Store
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import Main from './Main'
+import Main from './Main';
 
 
 function mapStateToProps(state){

@@ -26,8 +26,7 @@ export function ottieniFilmFail(error){
     }
 }
 
-
-//fetch the data
+//fetch the data film
 export function fetchMarvel(query) {
     const publicKey = '01fcb80cc8c6ef5e1a761b5b78583ac7'
     const ts = 'sergio'
@@ -45,7 +44,7 @@ export function fetchMarvel(query) {
             })
             .catch(error => dispatch(ottieniFilmFail(error)));
     }
-  }
+}
 
 export function addFilm(film) {
     return {

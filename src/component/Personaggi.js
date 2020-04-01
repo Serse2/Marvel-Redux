@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import SinglePer from './SinglePer';
 
+
+
+
+
 export default class Personaggi extends Component {
 
     componentDidMount = () =>{
         this.props.fetchPersMarvel('characters')
     }
 
-
     render() {
-            const { error, personaggi, loading } = this.props.personaggi
+        const { error, personaggi, loading } = this.props.personaggi
+
         if (error) {
             return(
                 <div>si è verificato un errore, prego verificare la console{console.log(error)}</div>
@@ -20,6 +24,7 @@ export default class Personaggi extends Component {
                 <div>Loading....</div>
             )
         }
+        
         return (
             <div>
                 <div className="grid-result">

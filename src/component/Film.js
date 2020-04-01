@@ -44,7 +44,7 @@ export default class Film extends Component {
                 </form>
                 <div className="grid-result">
                     {films.map((film, index) => (
-                        <SingleFilm key={index} film={film}/>
+                        <SingleFilm key={index} film={film} index={index}/>
                     ))}
                 </div>
                 

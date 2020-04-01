@@ -1,11 +1,12 @@
 
 import React, { Component, Fragment } from 'react';
-import { Switch, Route} from 'react-router';
+import { Switch, Route} from 'react-router-dom';
 import Film from './Film';
 import Personaggi from './Personaggi';
 import Home from './Home';
-import Header from './Header'
-import '../css/style.css'
+import Header from './Header';
+import Card from './Card';
+import '../css/style.css';
 
 export default class Main extends Component {
   render() {
@@ -13,6 +14,9 @@ export default class Main extends Component {
       <Fragment>
         <Header />
         <Switch>
+          <Route  path="/film/:id">
+              <Card {...this.props}/>
+          </Route>
           <Route path="/personaggi">
             <Personaggi {...this.props}/>
           </Route>
